@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+    /* background-color: var(--color-background); */
+    color: var(--color-text);
+    font-family: "AQL-Sans-Serif";
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+a:link {
+    color: var(--color-link);
+}
+
+a:visited {
+    color: var(--color-link-visited);
+}

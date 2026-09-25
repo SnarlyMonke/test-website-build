@@ -1,0 +1,12 @@
+hr {
+    border: none; /* gets rid of the old one */
+    border-top: 1px solid var(--color-text);
+}
+
+p {
+    padding: 0 0.5em;
+}
+
+.word-container {
+    text-align: center;
+}

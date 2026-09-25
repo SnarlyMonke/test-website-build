@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "AQL-Serif"; /*Oranienbaum*/
+    src: url("../assets/fonts/Oranienbaum.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "AQL-Sans-Serif"; /*Gontserrat*/
+    src: url("../assets/fonts/Gontserrat-Regular.ttf") format("truetype");
+}

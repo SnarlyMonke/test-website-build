@@ -1,0 +1,5 @@
+.colour-box {
+    width: var(--width);
+    height: var(--height);
+    background-color: var(--col);
+}

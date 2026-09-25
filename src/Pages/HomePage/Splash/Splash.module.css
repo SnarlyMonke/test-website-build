@@ -1,0 +1,114 @@
+.splash-container {
+    position: relative;
+}
+
+.splash-photo-crop {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    overflow: hidden;
+}
+
+.splash-photo { /*desktop splash*/
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    pointer-events: none;
+}
+
+.title-container {
+    position: absolute;
+    margin: 0;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    max-width: calc(1500px - 20%);
+    height: 50%;
+    top: 50%;
+    left: 40%;
+
+    /* border: 3px red solid; */
+}
+
+.title { /* acquity legal */
+    margin: 0;
+    margin-left: 1.25rem;
+    padding-left: 0;
+    margin-bottom: 3rem;
+
+    font-family: "AQL-Serif", serif;
+    font-size: 15em;
+    line-height: 0.8; /*spacing btwn lines*/
+
+    color: var(--bcolor-bg-white);
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    animation: title-enter 2s cubic-bezier(0.121, 0.553, 0.203, 1) forwards;
+    animation-delay: 0.1s;
+
+    /* border: 1px solid red; */
+}
+
+.title-desc { /* “æ-kwə-tē” */
+    margin: 0;
+    margin-left: 4rem;
+
+    font-family: "AQL-Sans-Serif", sans-serif;
+    font-size: 2em;
+
+    color: var(--bcolor-bg-white);
+
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    animation: title-desc-enter 3s cubic-bezier(0.241, 0.744, 0.36, 1) forwards;
+    animation-delay: 0.7s;
+
+    /* border: 1px solid red; */
+}
+
+@keyframes title-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-1em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes title-desc-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-3em);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.corner-logo {
+    position: absolute;
+
+    bottom: -3.04em;
+    right: max(0px, calc((100% - 1500px) / 2));
+
+    height: 20em;
+    overflow-y: visible;
+}

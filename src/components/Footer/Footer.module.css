@@ -1,0 +1,136 @@
+.footer {
+    width: calc(100vw);
+
+    /* background-color: white; */
+
+    position: relative;
+}
+
+
+.squiggly-guys {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.squiggly-guy {
+    width: fit-content;
+    display: inline-block;
+}
+
+
+.horizontal-divide {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 3.5em;
+}
+
+.fancy1 {
+    font-size: 2em;
+    padding-left: 0;
+    margin-top: 0.4em;
+    margin-bottom: 0;
+}
+
+.fancy2 {
+    font-size: 1em;
+    margin-top: 0;
+    padding-left: 0.5em;
+
+    color: var(--bcolor-denim);
+}
+
+.denim {
+    color: var(--bcolor-denim);
+}
+
+.lime-green {
+    color: var(--bcolor-lime-green);
+}
+
+
+.info-box {
+    width: fit-content;
+
+    padding: 0.5em 0.7em;
+
+    h2 {
+        margin: 0;
+
+        font-size: 2em;
+        color: var(--colorbc-text);
+        text-align: right;
+    }
+
+    h4 {
+        margin: 0;
+        margin-bottom: 0.67em;
+
+        font-size: 0.9em;
+        color: var(--colorbc-subtext);
+        text-align: right;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+        font-size: 0.9em;
+        text-align: left;
+    }
+}
+
+.contact-button {
+    margin: 0 auto;
+}
+
+
+.regulation-box {
+    background-color: rgba(255, 255, 255, 0.5);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    margin: 0;
+
+    text-align: center;
+
+    .text-holdinator {
+        width: calc(100% - 2rem);
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.8em;
+        font-style: italic;
+    }
+
+    h4 {
+        font-size: 0.9em;
+        margin: 0;
+    }
+}
+
+.copyright-box {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 1) 67%
+    );
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.copyright-words {
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+}

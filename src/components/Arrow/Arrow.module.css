@@ -1,0 +1,20 @@
+.arrow {
+    display: inline-block;
+
+    width: 1em;
+    height: 1em;
+
+    background-color: currentColor;
+
+    mask-image: url("../../assets/svgs/arrow-right-svgrepo-com.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url("../../assets/svgs/arrow-right-svgrepo-com.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+
+    transform: scale(1.2) translateY(0.11em);
+}

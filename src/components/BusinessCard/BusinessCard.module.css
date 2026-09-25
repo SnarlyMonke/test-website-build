@@ -1,0 +1,102 @@
+.card-base {
+    position: relative;
+    container-type: inline-size; /* makes it a query container? */
+    overflow: hidden;
+
+    width: 100%;
+    aspect-ratio: 18 / 11;
+
+    margin: 0;
+
+    background-color: var(--bcolor-bg-white);
+}
+
+
+.bc-front-logo {
+    position: absolute;
+
+    left: 19.586%;
+    top: 32.171%;
+    width: 63.9234%;
+
+    z-index: 1;
+}
+
+
+.bc-back-logo {
+    position: absolute;
+
+    left: 57.412%;
+    top: 5.445%;
+    height: 97%; /* good enuff */
+
+    z-index: 1;
+}
+
+
+.text-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.title-container {
+    h1 {
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        
+        font-weight: normal;
+        font-size: 9.9cqw;
+        white-space: nowrap;
+
+        color: var(--colorbc-text);
+    }
+
+    h4 {
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+
+        font-weight: normal;
+        font-size: 2.8cqw;
+
+        color: var(--colorbc-subtext);
+
+        transform: translateY(-2cqw);
+    }
+
+    margin-top: auto;
+    margin-bottom: auto;
+
+    padding-left: 4cqw;
+    padding-top: 15cqw;
+}
+
+
+.info-container {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+
+        font-weight: normal;
+        font-size: 2.2cqw;
+        line-height: 150%;
+
+        list-style: none;
+        color: var(--colorbc-subtext);
+    }
+
+    padding-left: 4cqw;
+    padding-bottom: 3cqh;
+}

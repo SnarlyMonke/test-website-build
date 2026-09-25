@@ -1,0 +1,32 @@
+.link-button {
+    padding: 15px 30px;
+
+    width: fit-content;
+
+    background-color: var(--base-col-bg);
+    border: 2px solid var(--base-col-button);
+    border-radius: 5px;
+    
+    text-decoration: none;
+    font-size: 1em;
+    
+    display: block;
+
+    color: var(--base-col-txt); /*dont think its actually doing anything, keep just in case*/
+    
+    transition:
+        color 0.2s,
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+.link-button:link,
+.link-button:visited {
+    color: var(--base-col-txt);
+}
+
+.link-button:hover {
+    color: var(--hover-col-txt);
+    border-color: var(--hover-col-button);
+    background-color: var(--hover-col-bg);
+}

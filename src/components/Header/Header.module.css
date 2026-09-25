@@ -1,0 +1,212 @@
+.header {
+    width: calc(100vw - 1px);
+    height: /*70px;*/ calc(54px + 1em);
+    
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap; /*remove this if it starts getting all cheeky*/
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: 5;
+}
+
+.header-break {
+    margin-top: /*70px;*/ calc(54px + 1em);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: /*60px;*/ calc(44px + 1em);
+
+    margin-left: 6.7px;
+    margin-top: 2px;
+
+    /* border: 1px solid red; */
+}
+
+.logo-text { /* the normal one (>= 1025px) */
+    height: /*40px;*/ calc(24px + 1em);
+
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logo-text-folded { /* the slightly shrunk one (1024px-900px?) */
+    height: /*60px;*/ calc(44px + 1em);
+
+    margin-left: 0;
+    margin-top: 5px;
+
+    /* display: none; */
+}
+
+
+.navigation-box {
+    display: flex;
+    margin-left: auto;
+    /* justify-content: flex-end; */
+}
+
+.page-box {
+    text-align: center;
+    list-style: none;
+    margin: auto;
+
+    padding: 5px 0;
+}
+
+
+.page-link, .page-link-bold {
+    padding: 15px 30px;
+
+    background-color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    
+    display: block;
+
+    transition: background-color 0.2s;
+}
+
+.page-link:hover {
+    background-color: var(--bcolore-light-blue);
+}
+
+.page-link:link,
+.page-link:visited {
+    color: var(--bcolor-navy);
+}
+
+
+.page-link-bold {
+    padding: 20px 40px;
+    margin: 0 20px;
+
+    border-radius: 40px;
+
+    background-color: var(--bcolor-navy);
+}
+
+.page-link-bold:hover {
+    background-color: var(--bcolore-dark-navy);
+}
+
+.page-link-bold:link,
+.page-link-bold:visited {
+    color: white;
+}
+
+
+.hamburger {
+    margin-left: auto;
+    margin-right: 20px;
+
+    /* display: none; */
+}
+
+
+
+/* scooching stuff around */
+.use-logo-image {
+    display: revert;
+}
+.remove-logo-image {
+    display: none;
+}
+.use-logo-text {
+    display: revert;
+}
+.remove-logo-text {
+    display: none;
+}
+.use-logo-text-folded {
+    display: revert;
+}
+.remove-logo-text-folded {
+    display: none;
+}
+.use-options {
+    display: flex;
+}
+.remove-options {
+    display: none;
+}
+.use-hamburger {
+    display: revert;
+}
+.remove-hamburger {
+    display: none;
+}
+
+
+
+/* sneaky header */
+.hidden-header {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+
+    /* Don't let it affect the page layout */
+    top: 0;
+    left: 0;
+
+    /* Optional, but useful */
+    width: max-content;
+    white-space: nowrap; /*remove this if it starts getting all cheeky*/
+}
+
+
+
+/* @media (max-width: 1025px) { /* first shrinkening
+    .logo-text {
+        display: none;
+    }
+
+    .logo-text-folded {
+        display: revert;
+    }
+}
+
+@media (max-width: 900px) { /* second shrinkening
+    .logo-text {
+        display: revert;
+    }
+
+    .logo-text-folded {
+        display: none;
+    }
+
+    .navigation-box {
+        display: none;
+    }
+
+    .hamburger {
+        display: revert;
+    }
+}
+
+@media (max-width: 350px) { /* third AND FINAL (tiny) shrinkenatering
+    .logo-text {
+        display: none;
+    }
+
+    .logo-text-folded {
+        display: revert;
+    }
+}
+
+@media (max-width: 230px) { /* ok ACTUALLY final (MINISCULE) shrinkenatering
+    .logo-text-folded {
+        display: none;
+    }
+} */

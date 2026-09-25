@@ -1,0 +1,79 @@
+.copy-button {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--size);
+    height: var(--size);
+
+    padding: 0;
+    margin: 0;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--base-col-bg);
+
+    cursor: pointer;
+    vertical-align: middle;
+
+    transform: translateY(var(--translate-y)) scale(1.2);
+
+    transition: background-color 0.2s;
+}
+
+.copy-button::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    background-color: var(--base-col-txt);
+
+    transition: background-color 0.2s;
+}
+
+.add::before {
+    mask-image: url("../../assets/svgs/clipboard-add.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url("../../assets/svgs/clipboard-add.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.check::before {
+    mask-image: url("../../assets/svgs/clipboard-check-svgrepo-com.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url("../../assets/svgs/clipboard-check-svgrepo-com.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+.copy-button:hover {
+    background-color: var(--hover-col-bg);
+}
+
+.copy-button:hover::before {
+    background-color: var(--hover-col-txt);
+}
+
+
+.visible {
+    display: inline-flex;
+}
+
+.hidden {
+    display: none;
+}

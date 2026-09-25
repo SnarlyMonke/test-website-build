@@ -1,0 +1,29 @@
+:root { /*defines the colours at the ROOT of the page; essentially html, so its accessible everywhere*/
+    /*base colours*/
+    --bcolor-dark-green: #173F35;
+    --bcolor-lime-green: #86AD3F;
+    --bcolor-baige: #EFDBB2;
+    --bcolor-salmon: #D7A179;
+    --bcolor-denim: #57728B;
+    --bcolor-navy: #002E5D;
+    --bcolor-bg-white: #F0EEE9;
+
+    /*extra website colours*/
+    --bcolore-green: #2a651a;
+    --bcolore-light-blue: #e4f0f9;
+    --bcolore-dark-navy: #001932;
+    --bcolore-bg-whiter: #f9f8f5;
+
+    /*business card colours*/
+    --colorbc-text: #19315B;
+    --colorbc-subtext: var(--bcolor-denim);
+
+    /*default colours for specific elements*/
+    --color-background: var(--bcolore-bg-whiter); /*background colour*/
+
+    --color-text: var(--bcolor-navy); /*text colour*/
+    --color-text2: var(--bcolore-dark-navy); /*text colour, but darker*/
+
+    --color-link: var(--bcolore-green); /*unclicked hyperlink colour*/
+    --color-link-visited: var(--bcolor-lime-green); /*clicked hyperlink colour*/
+}

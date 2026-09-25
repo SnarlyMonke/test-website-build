@@ -1,0 +1,60 @@
+h1 {
+    font-family: "AQL-Serif", serif;
+    font-size: 4.5em;
+    color: var(--color-text);
+    text-align: left;
+
+    padding-left: 1em;
+}
+
+h2 {
+    font-family: "AQL-Serif", serif;
+    font-size: 3em;
+    color: var(--color-text);
+    text-align: center;
+}
+
+h4 {
+    margin: 0.5em 0;
+    font-size: 1.15em;
+}
+
+p {
+    color: var(--color-text);
+    margin: 0.5em 0;
+}
+
+
+.app {
+    min-height: 100vh;
+
+    /*currently unused*/
+    display: flex;
+    flex-direction: column;
+}
+
+.base-page {
+    background-color: var(--color-background);
+    display: flow-root; /*prevents the div from collapsing a little and removing the lower margin (this works somehow, ttp*/
+}
+
+.content-holder {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+
+.ominous-logo {
+    position: fixed;
+
+    right: -100px;
+    bottom: 0;
+
+    height: 384px;
+
+    z-index: -1;
+    pointer-events: none;
+
+    filter: opacity(67%);
+}
