@@ -2,6 +2,7 @@ import styles from "./Header.module.css"
 import burgerStyles from "./Hamburger.module.css"
 
 import { useRef, useEffect, useState } from "react"
+import { Link } from "react-router-dom";
 import { Fade as HamburgerIcon } from 'hamburger-react'
 
 import { siteConfig } from "../../scripts/site.ts";
@@ -50,18 +51,18 @@ function Header({}: Props) {
 
     /** formatting options at the top bar */
     const headerList = headerOptions.map(option => <li key={option.id} value={option.link} className={styles["page-box"]}>
-        <a href={option.link} className={styles[option.style]}>
+        <Link to={option.link} className={styles[option.style]}>
             <b id={option.namedId}>{option.name}</b>
-        </a>
+        </Link>
     </li>); //maps food (every item in foods) into list brackets
 
     /** formatting options at the top bar (but for murger instead) */
     const burgerList = headerOptions.map(option => <li key={option.id} value={option.link}
         className={`${burgerStyles["page-box"]} ${option.style === "page-link-bold" ? burgerStyles["page-link-bold-li"] : ""}`} /** adds the bottom-link class to the li instead of the a */
     >
-        <a href={option.link} className={burgerStyles[option.style]}>
+        <Link to={option.link} className={burgerStyles[option.style]}>
             <b>{option.name}</b>
-        </a>
+        </Link>
     </li>); //maps food (every item in foods) into list brackets
 
 

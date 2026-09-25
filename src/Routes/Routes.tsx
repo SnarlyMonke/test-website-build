@@ -7,18 +7,25 @@ import ExpertisePage from "../Pages/ExpertisePage/ExpertisePage";
 import ClientsPage from "../Pages/ClientsPage/ClientsPage";
 import ContactPage from "../Pages/ContactPage/ContactPage";
 
-export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App/>,
-        children: [
-            {path: "", index: true, element: <HomePage/>},
-            {path: "about", element: <AboutPage/>},
-            {path: "expertise", element: <ExpertisePage/>},
-            {path: "clients", element: <ClientsPage/>},
-            {path: "contact", element: <ContactPage/>},
+const { BASE_URL } = import.meta.env;
 
-            {path: "*", element: <Navigate to="/" replace />} //catches any invalid routes
-        ]
+export const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <App/>,
+            children: [
+                {path: "", index: true, element: <HomePage/>},
+                {path: "about", element: <AboutPage/>},
+                {path: "expertise", element: <ExpertisePage/>},
+                {path: "clients", element: <ClientsPage/>},
+                {path: "contact", element: <ContactPage/>},
+
+                {path: "*", element: <Navigate to="/" replace />} //catches any invalid routes
+            ]
+        }
+    ],
+    {
+        basename: BASE_URL
     }
-]);
+);

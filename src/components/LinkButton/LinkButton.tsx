@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import styles from "./LinkButton.module.css"
 
 import Ar from "../../components/Arrow/Arrow.tsx";
@@ -55,11 +57,11 @@ function LinkButton({
     }
     
     return (
-        <a
-            href={link}
+        <Link
+            to={link}
             className={`${styles["link-button"]} ${className}`}
             style={cssVarsToPass}
-        >{children} <Ar/></a>
+        >{children} <Ar/></Link>
     );
 }
 
