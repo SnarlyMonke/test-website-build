@@ -27,19 +27,21 @@ p {
 
 .app {
     min-height: 100vh;
+    background-color: white;
 
-    /*currently unused*/
     display: flex;
     flex-direction: column;
 }
 
 .base-page {
+    position: relative;
+    z-index: 1;
     background-color: var(--color-background);
     display: flow-root; /*prevents the div from collapsing a little and removing the lower margin (this works somehow, ttp*/
 }
 
 .content-holder {
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 1em;
 }
@@ -47,14 +49,11 @@ p {
 
 .ominous-logo {
     position: fixed;
-
     right: -100px;
     bottom: 0;
-
     height: 384px;
 
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
-
     filter: opacity(67%);
 }

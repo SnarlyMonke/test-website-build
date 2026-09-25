@@ -97,7 +97,7 @@ function Header({}: Props) {
         > {/** snatches css of header, then hides it with hidden-header */}
 
             {/** corner logo */}
-            <a href="/" className={styles["logo-container"]}
+            <Link to="/" className={styles["logo-container"]}
                 id="container_logo" ref={(element) => {containerRefs.current["container_logo"] = element;}}
             >
 
@@ -121,7 +121,7 @@ function Header({}: Props) {
                     ref={(element) => {containerRefs.current["container_logo_text_folded"] = element;}}
                 ></img> {/* smooshed text */}
 
-            </a>
+            </Link>
 
             {/** header options */}
             <nav
@@ -148,7 +148,7 @@ function Header({}: Props) {
         <header className={styles["header"]}>
 
             {/** corner logo */}
-            <a href="/" className={styles["logo-container"]}
+            <Link to="/" className={styles["logo-container"]}
                 id="container_logo" ref={(element) => {containerRefs.current["container_logo"] = element;}}>
 
                 <img src={logoImage} alt={`${firmName} Logo`}
@@ -165,7 +165,7 @@ function Header({}: Props) {
                     className={`${styles["logo-text-folded"]} ${useLogoTextFolded ? styles["use-logo-text-folded"] : styles["remove-logo-text-folded"]}`}
                 ></img> {/* smooshed text */}
 
-            </a>
+            </Link>
 
 
             {/** header options */}
