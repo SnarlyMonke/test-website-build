@@ -18,8 +18,14 @@
     --colorbc-text: #19315B;
     --colorbc-subtext: var(--bcolor-denim);
 
+    /*button colours*/
+    --color-button: var(--bcolor-navy); /*when it aint hovered over*/
+    --color-button-hover: var(--bcolor-lime-green); /*when it BEEEEEEEEE hovered over*/
+
     /*default colours for specific elements*/
     --color-background: var(--bcolore-bg-whiter); /*background colour*/
+    --color-header: white; /*header col*/
+    --color-footer: var(--bcolor-bg-white); /*footer col (essentially bgbg*/
 
     --color-text: var(--bcolor-navy); /*text colour*/
     --color-text2: var(--bcolore-dark-navy); /*text colour, but darker*/

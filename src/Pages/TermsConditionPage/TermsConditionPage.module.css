@@ -1,0 +1,10 @@
+.chilling-image {
+    height: 40rem;
+
+    border-radius: 6px;
+}
+
+.chilling-quote {
+    text-align: right;
+    padding-right: 4vw;
+}

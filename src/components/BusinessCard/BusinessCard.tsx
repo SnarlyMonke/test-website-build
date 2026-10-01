@@ -86,7 +86,6 @@ function BusinessCard({
                             size={"3cqw"}
                             translateY={"-0.2cqw"}
                             baseCol={"var(--colorbc-subtext)"}
-                            hoverCol={"var(--colorbc-text)"}
                             transparent={true}
                         /></li>
                         <li>{contactEmail} <ClipboardCopy
@@ -94,7 +93,6 @@ function BusinessCard({
                             size={"3cqw"}
                             translateY={"-0.2cqw"}
                             baseCol={"var(--colorbc-subtext)"}
-                            hoverCol={"var(--colorbc-text)"}
                             transparent={true}
                         /></li>
                         <li>{webURL} <ClipboardCopy
@@ -102,7 +100,6 @@ function BusinessCard({
                             size={"3cqw"}
                             translateY={"-0.2cqw"}
                             baseCol={"var(--colorbc-subtext)"}
-                            hoverCol={"var(--colorbc-text)"}
                             transparent={true}
                         /></li>
                     </ul>

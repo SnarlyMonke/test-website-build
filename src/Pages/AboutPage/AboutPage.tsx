@@ -5,13 +5,17 @@ import appStyles from "../../App.module.css"
 
 import { siteConfig } from '../../scripts/site.ts'
 
-// import ImageText from '../../components/ImageText/ImageText.tsx'
+import ImageText from '../../components/ImageText/ImageText.tsx'
+import Sp from "../../components/Space.tsx"
+
+import dalveenBanjoPNG from "../../assets/photos/dalveen_bongo.png"
+import dalveenDeskSeriousPNG from "../../assets/photos/dalveen_desk_2.png"
 
 
 const AboutPage = () => {
     
     const firmName = siteConfig.details.firmName;
-    const firmNameFull = siteConfig.details.firmNameFull;
+    // const firmNameFull = siteConfig.details.firmNameFull;
     // const webURL = siteConfig.details.websiteURL;
 
     const contactName = siteConfig.contact.name;
@@ -21,48 +25,76 @@ const AboutPage = () => {
     
     return (
         <div className={appStyles["base-page"]}> {/** full page */}
-            <div className={appStyles["content-holder"]}> {/** page limited to 1500px */}
-                <h1>About Dalveen</h1>
-                    <ul>
-                        <li>I established {firmName} to provide experienced, practical legal and governance advice to organisations whose work has a broader purpose.</li>
-                        <li>I have spent more than 30 years working in corporate law and governance. Over time, I found myself increasingly drawn to working with charities, not-for-profit organisations and Aboriginal organisations.</li>
-                        <li>What I value about this work is its practical purpose.</li>
-                        <li>Behind every organisation is a group of people trying to achieve something worthwhile, often while navigating complicated legal, governance and commercial issues.</li>
-                        <li>My role is to help make those issues clearer and more manageable so that boards and leaders can make sound decisions and concentrate on the work their organisation exists to do.</li>
-                        <li>Charities are not simple organisations. They can be substantial employers and businesses. They manage funding, contracts, intellectual property, regulatory obligations, relationships and risk. At the same time, every decision ultimately needs to remain connected to charitable purpose and public benefit.</li>
-                        <li>I enjoy working at that intersection.</li>
-                        <li>I am most comfortable working alongside my clients — understanding what they are trying to achieve, identifying the issues that genuinely matter and helping them find practical solutions.</li>
-                        <li>That is why I chose to establish a legal practice focused on this sector.</li>
-                    </ul>
+
+            <div className={appStyles["free-content-holder"]}>
+
+                <ImageText
+                    titleHTML={<h1>About Dalveen</h1>}
+                    altText="Picture of Dalveen (and Banjo)"
+                    imagePNG={dalveenBanjoPNG}
+                    height={"30rem"}
+                >
+                    <p>I established <em>{firmName}</em> to provide experienced, practical legal and governance advice to organisations whose work has a broader purpose.</p>
+                    <p>I have spent more than 30 years working in corporate law and governance.<Sp/>
+                        Over time, I found myself increasingly drawn to working with charities, not-for-profit organisations and Aboriginal organisations.</p>
+                    <p>What I value about this work is its <strong>practical purpose.</strong><Sp/>
+                        Behind every organisation is a group of people trying to achieve something worthwhile, often while navigating complicated legal, governance and commercial issues.</p>
+                </ImageText>
+
+            </div>
+
+            <div className={appStyles["content-holder"]}> {/** page limited to 1200px */}
+
+                <p>My role is to help make those issues clearer and more manageable so that boards and leaders can make sound decisions and concentrate on the work their organisation exists to do.<Sp/>
+                    <strong>Charities are not simple organisations.</strong><Sp/>
+                    They can be substantial employers and businesses.<Sp/>
+                    They manage{" "}
+                        <em>funding</em>,{" "}
+                        <em>contracts</em>,{" "}
+                        <em>intellectual property</em>,{" "}
+                        <em>regulatory obligations</em>,{" "}
+                        <em>relationships</em> and{" "}
+                        <em>risk</em>.<Sp/>
+                    At the same time, every decision ultimately needs to remain connected to charitable purpose and public benefit.<Sp/>
+                    <strong>I enjoy working at that intersection.</strong></p>
+
+                <p>I am most comfortable working alongside my clients — understanding <em>what</em> they are trying to achieve, identifying the issues that <em>genuinely matter</em> and helping them find practical solutions.<Sp/>
+                    That is why I chose to establish a legal practice focused on this sector.</p>
 
                 <h2>Experience and perspective</h2>
+                    <p>My background in corporate law and governance allows me to bring a commercial and structural perspective to charity and not-for-profit matters.</p>
+                    <p>I regularly work with boards, senior executives and founders, particularly where organisations are:</p>
                     <ul>
-                        <li>My background in corporate law and governance allows me to bring a commercial and structural perspective to charity and not-for-profit matters.</li>
-                        <li>I regularly work with boards, senior executives and founders, particularly where organisations are:</li>
-                        <ul>
-                            <li>growing or changing;</li>
-                            <li>reconsidering governance structures;</li>
-                            <li>managing relationships between related entities;</li>
-                            <li>establishing subsidiaries or new activities;</li>
-                            <li>dealing with conflicts or related-party arrangements;</li>
-                            <li>responding to legal, regulatory or organisational risk; or</li>
-                            <li>facing a decision where there is no obvious or simple answer.</li>
-                        </ul>
-                        <li>My approach is careful and pragmatic.</li>
-                        <li>The aim is not to create governance for governance's sake. It is to put in place legal and governance arrangements that are proportionate, capable of being implemented and appropriate for the organisation concerned.</li>
+                        <li>growing or changing;</li>
+                        <li>reconsidering governance structures;</li>
+                        <li>managing relationships between related entities;</li>
+                        <li>establishing subsidiaries or new activities;</li>
+                        <li>dealing with conflicts or related-party arrangements;</li>
+                        <li>responding to legal, regulatory or organisational risk; or</li>
+                        <li>facing a decision where there is no obvious or simple answer.</li>
                     </ul>
+                    <p>My approach is careful and pragmatic.<Sp/>
+                        The aim is not to create governance for governance's sake.<Sp/>
+                        It is to put in place legal and governance arrangements that are proportionate, capable of being implemented and appropriate for the organisation concerned.</p>
 
-                <h2>Professional background</h2>
-                    <p>{contactName} <br/>
-                    {contactTitle}, {firmNameFull}</p>
+                <ImageText
+                    titleHTML={<h2>Professional background and History</h2>}
+                    imagePNG={dalveenDeskSeriousPNG}
+                    height="30rem"
+                    imagePlacementX="right"
+                >
+                    <p><strong>{contactName} {contactTitle}, {firmName}</strong></p>
 
-                    <p>Bachelor of Laws <br/>
-                    Bachelor of Jurisprudence <br/>
-                    University of Western Australia</p>
+                    <p>Dalveen established <em>AcQuity Legal</em> on 1 July 2025.</p>
+                    <p>From 2011 to 2025, Dalveen was a consultant at Gilbert + Tobin, working in its Charities and Not-for-Profit and Energy and Resources practices.<Sp/>
+                        Before that, she was a partner and subsequently a consultant at Perth firm Blakiston & Crabb, which joined Gilbert + Tobin in 2011.<Sp/>
+                        She began her legal career at Mallesons Stephen Jaques.</p>
+                    <p>Dalveen holds a Bachelor of Laws and a Bachelor of Jurisprudence from the University of Western Australia, awarded in 1990.<Sp/>
+                        She is a Fellow of the Governance Institute of Australia and a member of the Law Society of Western Australia and the Charity Law Association of Australia and New Zealand.</p>
+                    <p>Dalveen is a director of Central Desert Native Title Services Limited and The Gilbert and Tobin Foundation.<Sp/>
+                        She is a management committee member of SSJG Ministries Inc and a State committee member of the Governance Institute of Australia.</p>
 
-                    <p>Fellow, Governance Institute of Australia <br/>
-                    Member, Law Society of Western Australia <br/>
-                    Member, Charity Law Association of Australia and New Zealand</p>
+                </ImageText>
 
             </div>
         </div>

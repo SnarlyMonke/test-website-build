@@ -6,6 +6,7 @@ import AboutPage from "../Pages/AboutPage/AboutPage";
 import ExpertisePage from "../Pages/ExpertisePage/ExpertisePage";
 import ClientsPage from "../Pages/ClientsPage/ClientsPage";
 import ContactPage from "../Pages/ContactPage/ContactPage";
+import TermsConditionPage from "../Pages/TermsConditionPage/TermsConditionPage";
 
 const { BASE_URL } = import.meta.env;
 
@@ -20,6 +21,7 @@ export const router = createBrowserRouter(
                 {path: "expertise", element: <ExpertisePage/>},
                 {path: "clients", element: <ClientsPage/>},
                 {path: "contact", element: <ContactPage/>},
+                {path: "terms-condition", element: <TermsConditionPage/>},
 
                 {path: "*", element: <Navigate to="/" replace />} //catches any invalid routes
             ]

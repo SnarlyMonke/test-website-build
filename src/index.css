@@ -2,9 +2,11 @@ body {
     margin: 0;
     padding: 0;
     
-    /* background-color: var(--color-background); */
+    background-color: var(--color-footer);
     color: var(--color-text);
     font-family: "AQL-Sans-Serif";
+
+    text-rendering: optimizeLegibility;
 }
 
 html, body {

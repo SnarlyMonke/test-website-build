@@ -33,7 +33,7 @@ function Splash({}: Props) {
                 
                 <img
                     src={beachHousePhotoJPG}
-                    alt="House at the beach"
+                    alt=""
                     loading="lazy"
                     className={styles["splash-photo"]}
                 />
@@ -50,9 +50,26 @@ function Splash({}: Props) {
             
             {/** words */}
             <div className={styles["title-container"]}>
-                <h1 className={styles["title"]}>AcQuity<br/>&nbsp;Legal</h1>
-                <p className={styles["title-desc"]}>“a·kwuh·tee<Sp/>lee·gl”</p>
-                <p className={styles["title-desc"]}><b><Sp/><Sp/>{firmNameFull}</b></p>
+                <h1 className={styles["title"]}>
+                    <span className={styles["title-line1"]}>AcQuity</span>
+                    <span className={styles["title-line2"]}>Legal</span>
+                </h1>
+                <p
+                    className={`
+                        ${styles["title-desc"]}
+                        ${styles["title-desc1"]}
+                    `}
+                >
+                    “a·kwuh·tee<Sp/>lee·gl”
+                </p>
+                <p
+                    className={`
+                        ${styles["title-desc"]}
+                        ${styles["title-desc2"]}
+                    `}
+                >
+                    <b>{firmNameFull}</b>
+                </p>
             </div>
 
         </div>

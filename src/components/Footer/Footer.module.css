@@ -1,9 +1,12 @@
 .footer {
     width: calc(100vw);
 
-    /* background-color: white; */
-
     position: relative;
+}
+
+.footer-content { /*basically undoing some o the content-holder styling he dont want*/
+    border: 0;
+    margin: 0.5em auto
 }
 
 
@@ -21,6 +24,14 @@
 }
 
 
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+}
+
 .horizontal-divide {
     display: flex;
     align-items: center;
@@ -31,18 +42,23 @@
 }
 
 .fancy1 {
-    font-size: 2em;
     padding-left: 0;
     margin-top: 0.4em;
     margin-bottom: 0;
+
+    font-size: 2em;
+    line-height: 1;
+    text-decoration: none;
 }
 
 .fancy2 {
-    font-size: 1em;
     margin-top: 0;
     padding-left: 0.5em;
 
     color: var(--bcolor-denim);
+    font-size: 1em;
+    line-height: 1;
+    text-decoration: none;
 }
 
 .denim {
@@ -92,7 +108,7 @@
 
 
 .regulation-box {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: color-mix(in srgb, var(--color-background) 50%, transparent); /*makes it the bg colour, then 50% transpoarent*/
 
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -119,13 +135,46 @@
     }
 }
 
-.copyright-box {
+
+.squiggly-texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    padding: 0.5rem 0 1rem 0;
+}
+
+
+.little-text-box {
     font-size: 0.8em;
     margin: 0;
+
+    width: fit-content;
+    display: inline-block;
 }
 
 .copyright-words {
     text-align: center;
     margin: 0;
-    padding: 1em;
+    padding: 0 1.5rem;
+}
+
+.terms-words {
+    text-align: center;
+    margin: 0;
+    padding: 0 1.5rem;
+
+    text-decoration: none;
+}
+
+.terms-link {
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration-line: underline;
+    text-decoration-color: var(--color-text);
+    text-decoration-thickness: 0.09em;
 }

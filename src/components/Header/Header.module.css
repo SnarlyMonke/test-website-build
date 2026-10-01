@@ -2,7 +2,7 @@
     width: calc(100vw - 1px);
     height: /*70px;*/ calc(54px + 1em);
     
-    background-color: white;
+    background-color: var(--color-header);
 
     display: flex;
     align-items: center;
@@ -68,7 +68,7 @@
 .page-link, .page-link-bold {
     padding: 15px 30px;
 
-    background-color: white;
+    background-color: var(--color-header);
     border-radius: 5px;
     text-decoration: none;
     font-size: 1em;
@@ -94,16 +94,16 @@
 
     border-radius: 40px;
 
-    background-color: var(--bcolor-navy);
+    background-color: var(--color-button);
 }
 
 .page-link-bold:hover {
-    background-color: var(--bcolore-dark-navy);
+    background-color: var(--color-button-hover);
 }
 
 .page-link-bold:link,
 .page-link-bold:visited {
-    color: white;
+    color: var(--color-header);
 }
 
 

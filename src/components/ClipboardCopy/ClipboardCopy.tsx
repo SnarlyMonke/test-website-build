@@ -29,8 +29,8 @@ function ClipboardCopy({
     text,
     size="1em",
     translateY="0",
-    baseCol="var(--bcolor-navy)", 
-    hoverCol="var(--bcolor-lime-green)", 
+    baseCol="var(--color-button)",
+    hoverCol="var(--color-button-hover)", 
     transparent=true
 }: Props) {
     
@@ -72,7 +72,7 @@ function ClipboardCopy({
             "--base-col-txt": baseCol,
             "--base-col-bg": "transparent",
             "--hover-col-txt": hoverCol,
-            "--hover-col-bg": "rgba(0, 0, 0, 0.1)",
+            "--hover-col-bg": "transparent",
         }
     } else { /** coloured in bg */
         cssVarsToPass = {

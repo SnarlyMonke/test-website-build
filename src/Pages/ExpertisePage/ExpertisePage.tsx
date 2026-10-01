@@ -3,8 +3,15 @@
 import appStyles from "../../App.module.css"
 // import styles from "./ExpertisePage.module.css"
 
+import tempImage from "../../assets/photos/temp_guy.png"
+import beachSide from "../../assets/photos/beach_side_2.png"
+
 import { siteConfig } from '../../scripts/site.ts'
+import type { Article } from "../../components/ArticleGrid/Article.type.ts"
+
 import Sp from "../../components/Space.tsx";
+import ArticleGrid from "../../components/ArticleGrid/ArticleGrid.tsx";
+import ImageText from "../../components/ImageText/ImageText.tsx";
 
 
 const ExpertisePage = () => {
@@ -17,118 +24,153 @@ const ExpertisePage = () => {
     // const contactPhone = siteConfig.contact.phone;
     // const contactEmail = siteConfig.contact.contactEmail;
 
+
+    const articleEntries: Article[] = [
+        {
+            title: "Charity and not-for-profit law",
+            image: tempImage,
+            shortDescription: "",
+            dotPointPreface: "Advice includes:",
+            dotPointsHTML: [
+                <li><em>charitable purposes and public benefit</em>;</li>,
+                <li><em>ACNC registration and compliance</em>;</li>,
+                <li><em>charity governance</em>;</li>,
+                <li><em>constitutional amendments</em>;</li>,
+                <li><em>deductible gift recipient and structural issues</em>;</li>,
+                <li><em>private benefit and related-party arrangements</em>;</li>,
+                <li><em>establishment of charitable entities</em>;</li>,
+                <li><em>legal issues affecting charitable activities and programs</em>; and</li>,
+                <li><em>regulator engagement</em>.</li>,
+            ],
+        },
+        {
+            title: "Governance and board advice",
+            image: tempImage,
+            shortDescription: "I advise boards on both governance frameworks and individual decisions.",
+            dotPointPreface: "This includes:",
+            dotPointsHTML: [
+                <li><em>directors' duties</em>;</li>,
+                <li><em>board roles and responsibilities</em>;</li>,
+                <li><em>delegations</em>;</li>,
+                <li><em>reserved matters</em>;</li>,
+                <li><em>conflicts of interest</em>;</li>,
+                <li><em>related-party transactions</em>;</li>,
+                <li><em>board and committee structures</em>;</li>,
+                <li><em>governance policies</em>;</li>,
+                <li><em>founder and executive roles</em>;</li>,
+                <li><em>board decision-making</em>;</li>,
+                <li><em>board papers and resolutions</em>;</li>,
+                <li><em>governance reviews</em>; and</li>,
+                <li><em>responses to legal, financial, reputational and organisational risk</em>.</li>,
+            ],
+        },
+        {
+            title: "Aboriginal corporations",
+            image: tempImage,
+            shortDescription: "",
+            dotPointPreface: "Advice to Aboriginal corporations includes:",
+            dotPointsHTML: [
+                <li><em>CATSI Act requirements</em>;</li>,
+                <li><em>rule books</em>;</li>,
+                <li><em>membership structures</em>;</li>,
+                <li><em>board composition and governance</em>;</li>,
+                <li><em>director and member rights</em>;</li>,
+                <li><em>ORIC compliance</em>;</li>,
+                <li><em>related entities</em>;</li>,
+                <li><em>organisational restructures</em>; and</li>,
+                <li><em>governance frameworks appropriate to the organisation and its community</em>.</li>,
+            ],
+        },
+        {
+            title: "Corporate structures and organisational change",
+            image: tempImage,
+            shortDescription: "I advise organisations establishing, changing or simplifying their corporate structures.",
+            dotPointPreface: "This can include:",
+            dotPointsHTML: [
+                <li><em>incorporation</em>;</li>,
+                <li><em>subsidiaries</em>;</li>,
+                <li><em>group structures</em>;</li>,
+                <li><em>transfers of activities</em>;</li>,
+                <li><em>restructures</em>;</li>,
+                <li><em>mergers and collaborations</em>;</li>,
+                <li><em>governance relationships between related organisations</em>;</li>,
+                <li><em>service arrangements within groups</em>; and</li>,
+                <li><em>separation of charitable and commercial activities</em>.</li>,
+            ],
+        },
+        {
+            title: "Commercial arrangements",
+            image: tempImage,
+            shortDescription: "Charities and not-for-profits enter commercial arrangements every day.",
+            dotPointPreface: "I advise on:",
+            dotPointsHTML: [
+                <li><em>funding agreements</em>;</li>,
+                <li><em>service agreements</em>;</li>,
+                <li><em>intellectual property arrangements</em>;</li>,
+                <li><em>collaborations and partnerships</em>;</li>,
+                <li><em>commercial contracts</em>;</li>,
+                <li><em>shared services</em>;</li>,
+                <li><em>arrangements between related organisations</em>; and</li>,
+                <li><em>contracts supporting new programs and activities</em>.</li>,
+            ],
+        },
+        {
+            title: "Governance frameworks and organisational development",
+            image: tempImage,
+            shortDescription: "As organisations grow, informal ways of working often need to evolve.",
+            dotPointPreface: "I assist organisations to develop governance arrangements including:",
+            dotPointsHTML: [
+                <li><em>delegations frameworks</em>;</li>,
+                <li><em>authority matrices</em>;</li>,
+                <li><em>governance manuals</em>;</li>,
+                <li><em>conflicts policies</em>;</li>,
+                <li><em>related-party transaction policies</em>;</li>,
+                <li><em>board and committee terms of reference</em>;</li>,
+                <li><em>decision-making protocols</em>;</li>,
+                <li><em>risk escalation frameworks</em>; and</li>,
+                <li><em>governance training for boards, executives and staff</em>.</li>,
+            ],
+        },
+    ];
+
+
     return (
         <div className={appStyles["base-page"]}> {/** full page */}
             <div className={appStyles["content-holder"]}> {/** page limited to 1500px */}
+
                 <h1>Expertise</h1>
-                <p>{firmName} provides specialist advice across charity, corporate and governance law.<Sp/>
-                The practice has particular experience in matters where legal requirements need to be considered alongside governance, organisational relationships and practical implementation.</p>
+                    <p>{firmName} provides specialist advice across <strong>charity, corporate and governance law.</strong><Sp/>
+                    The practice has particular experience in matters where legal requirements need to be considered alongside{" "}
+                        <em>governance</em>,{" "}
+                        <em>organisational relationships</em> and{" "}
+                        <em>practical implementation</em>.</p>
 
-                <h2>Charity and not-for-profit law</h2>
-                <p>Advice includes:</p>
-                <ul>
-                    <li>charitable purposes and public benefit;</li>
-                    <li>ACNC registration and compliance;</li>
-                    <li>charity governance;</li>
-                    <li>constitutional amendments;</li>
-                    <li>deductible gift recipient and structural issues;</li>
-                    <li>private benefit and related-party arrangements;</li>
-                    <li>establishment of charitable entities;</li>
-                    <li>legal issues affecting charitable activities and programs; and</li>
-                    <li>regulator engagement.</li>
-                </ul>
+                <ArticleGrid articles={articleEntries}/>
 
-                <h2>Governance and board advice</h2>
-                <p>I advise boards on both governance frameworks and individual decisions.</p>
-                <p>This includes:</p>
-                <ul>
-                    <li>directors' duties;</li>
-                    <li>board roles and responsibilities;</li>
-                    <li>delegations;</li>
-                    <li>reserved matters;</li>
-                    <li>conflicts of interest;</li>
-                    <li>related-party transactions;</li>
-                    <li>board and committee structures;</li>
-                    <li>governance policies;</li>
-                    <li>founder and executive roles;</li>
-                    <li>board decision-making;</li>
-                    <li>board papers and resolutions;</li>
-                    <li>governance reviews; and</li>
-                    <li>responses to legal, financial, reputational and organisational risk.</li>
-                </ul>
+                <ImageText
+                    titleHTML={<h2>Complex and sensitive matters</h2>}
+                    imagePNG={beachSide}
+                    height="20rem"
+                    imagePlacementX="right"
+                >
 
-                <h2>Aboriginal corporations</h2>
-                <p>Advice to Aboriginal corporations includes:</p>
-                <ul>
-                    <li>CATSI Act requirements;</li>
-                    <li>rule books;</li>
-                    <li>membership structures;</li>
-                    <li>board composition and governance;</li>
-                    <li>director and member rights;</li>
-                    <li>ORIC compliance;</li>
-                    <li>related entities;</li>
-                    <li>organisational restructures; and</li>
-                    <li>governance frameworks appropriate to the organisation and its community.</li>
-                </ul>
+                    <p>Some matters <strong>do not fit neatly</strong> within a conventional practice category.</p>
+                    <p>They may involve a combination of{" "}
+                        <em>legal risk</em>,{" "}
+                        <em>governance responsibilities</em>,{" "}
+                        <em>regulatory requirements</em>,{" "}
+                        <em>relationships</em> and{" "}
+                        <em>reputation</em>.
+                    </p>
 
-                <h2>Corporate structures and organisational change</h2>
-                <p>I advise organisations establishing, changing or simplifying their corporate structures.</p>
-                <p>This can include:</p>
-                <ul>
-                    <li>incorporation;</li>
-                    <li>subsidiaries;</li>
-                    <li>group structures;</li>
-                    <li>transfers of activities;</li>
-                    <li>restructures;</li>
-                    <li>mergers and collaborations;</li>
-                    <li>governance relationships between related organisations;</li>
-                    <li>service arrangements within groups; and</li>
-                    <li>separation of charitable and commercial activities.</li>
-                </ul>
+                    <p>In these circumstances my role is to help boards and leaders{" "}
+                        <em>identify the issues that matter</em>,{" "}
+                        <em>understand their options</em> and{" "}
+                        <em>make a sound and defensible decision</em>.
+                    </p>
 
-                <h2>Commercial arrangements</h2>
-                <p>Charities and not-for-profits enter commercial arrangements every day.</p>
-                <p>I advise on:</p>
-                <ul>
-                    <li>funding agreements;</li>
-                    <li>service agreements;</li>
-                    <li>intellectual property arrangements;</li>
-                    <li>collaborations and partnerships;</li>
-                    <li>commercial contracts;</li>
-                    <li>shared services;</li>
-                    <li>arrangements between related organisations; and</li>
-                    <li>contracts supporting new programs and activities.</li>
-                </ul>
+                </ImageText>
 
-                <h2>Governance frameworks and organisational development</h2>
-                <p>As organisations grow, informal ways of working often need to evolve.</p>
-                <p>I assist organisations to develop governance arrangements including:</p>
-                <ul>
-                    <li>delegations frameworks;</li>
-                    <li>authority matrices;</li>
-                    <li>governance manuals;</li>
-                    <li>conflicts policies;</li>
-                    <li>related-party transaction policies;</li>
-                    <li>board and committee terms of reference;</li>
-                    <li>decision-making protocols;</li>
-                    <li>risk escalation frameworks; and</li>
-                    <li>governance training for boards, executives and staff.</li>
-                </ul>
-
-                <h2>Complex and sensitive matters</h2>
-                <p>Some matters <strong>do not fit</strong> neatly within a conventional practice category.</p>
-                <p>They may involve a combination of{" "}
-                    <strong>legal risk</strong>,{" "}
-                    <strong>governance responsibilities</strong>,{" "}
-                    <strong>regulatory requirements</strong>,{" "}
-                    <strong>relationships</strong> and{" "}
-                    <strong>reputation</strong>.
-                </p>
-                <p>In these circumstances my role is to help boards and leaders{" "}
-                    <strong>identify the issues that matter</strong>,{" "}
-                    <strong>understand their options</strong> and{" "}
-                    <strong>make a sound and defensible decision</strong>.
-                </p>
             </div>
         </div>
     );

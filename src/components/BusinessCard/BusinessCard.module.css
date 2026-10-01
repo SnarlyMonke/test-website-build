@@ -53,6 +53,7 @@
         font-weight: normal;
         font-size: 9.9cqw;
         white-space: nowrap;
+        line-height: 1;
 
         color: var(--colorbc-text);
     }
@@ -64,10 +65,11 @@
 
         font-weight: normal;
         font-size: 2.8cqw;
+        line-height: 1;
 
         color: var(--colorbc-subtext);
 
-        transform: translateY(-2cqw);
+        transform: translateY(-1.2cqw);
     }
 
     margin-top: auto;
@@ -98,5 +100,5 @@
     }
 
     padding-left: 4cqw;
-    padding-bottom: 3cqh;
+    padding-bottom: 3cqw;
 }

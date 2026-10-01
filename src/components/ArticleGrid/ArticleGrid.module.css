@@ -1,0 +1,156 @@
+.article-holder {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+
+    margin: 40px 0;
+}
+
+.one-column {
+    grid-template-columns: 1fr;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.article-holder :global(.accordion-item) {
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.article-holder :global(.accordion-item):hover {
+    outline: 6px solid var(--color-button-hover);
+    outline-offset: 5px;
+    
+    transition:
+        outline-width 0.3s,
+        outline-offset 0.3s;
+}
+
+
+.article-holder :global(.accordion-header) {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Remove Bootstrap's default button styling */
+.article-holder :global(.accordion-button) {
+    display: block;
+
+    padding: 0;
+
+    background: none;
+    box-shadow: none;
+}
+
+/* Don't let Bootstrap's arrow take up space */
+.article-holder :global(.accordion-button)::after {
+    display: none;
+}
+
+/* Bootstrap adds a background when expanded */
+.article-holder :global(.accordion-button:not(.collapsed)) {
+    background: none;
+    color: inherit;
+    box-shadow: none;
+}
+
+
+.clickable-box {
+    cursor: pointer;
+}
+
+
+
+.image-box {
+    --image-scale: 1;
+    transition: 0.3s;
+}
+
+.image-box:hover {
+    --image-scale: 1.1;
+}
+
+
+
+.title-box {
+    padding: 1rem 0.37rem;
+    background-color: var(--color-header);
+}
+
+.title-box h3 { /*text at the top*/
+    line-height: 1;
+    text-align: right;
+
+    margin: 0 0.4em;
+    padding: 0;
+}
+
+.title-box p { /*not always there, but a brief description*/
+    margin: 0.6em 0.4em 0 0.4em;
+    padding: 0;
+
+    text-align: right;
+    color: var(--bcolor-denim);
+}
+
+.article-holder :global(.accordion-body) {
+    padding: 0;
+}
+
+
+
+.dropdown-box { /*content after fold down*/
+    margin: 0;
+    background-color: var(--color-header);
+}
+
+.dropdown-box h4 {
+    margin:  0      0.67em 0      0.67em;
+    padding: 0.67em 0      0.37em 0     ;
+
+    text-align: center;
+
+    color: var(--color-text);
+
+    border: 0;
+    border-top: 2px solid color-mix(in srgb, var(--bcolor-denim) 50%, transparent);
+}
+
+.dropdown-box ul {
+    margin: 0;
+    padding: 0 3em 1em 3em;
+
+    color: var(--color-text);
+}
+
+
+
+@media (max-width: 60rem) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 70rem) {
+    .three-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 45rem) {
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
-
 import styles from "./LinkButton.module.css"
 
-import Ar from "../../components/Arrow/Arrow.tsx";
+import Ar from "../Arrow.tsx";
+import PageLink from "../PageLink.tsx";
 
 
 type Props = { /** question marks make it so they dont need to be given */
@@ -28,8 +27,8 @@ type CSSVariables = React.CSSProperties & {
 function LinkButton({
     children,
     link,
-    baseCol="var(--bcolor-navy)",
-    hoverCol="var(--bcolor-lime-green)",
+    baseCol="var(--color-button)",
+    hoverCol="var(--color-button-hover)",
     transparent=true,
     className = "",
 }: Props) {
@@ -57,11 +56,11 @@ function LinkButton({
     }
     
     return (
-        <Link
+        <PageLink
             to={link}
             className={`${styles["link-button"]} ${className}`}
             style={cssVarsToPass}
-        >{children} <Ar/></Link>
+        >{children} <Ar/></PageLink>
     );
 }
 

@@ -1,0 +1,18 @@
+.image-crop {
+    display: block;
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+
+    transform: scale(var(--image-scale, 1));
+    transition: transform 0.3s ease;
+}

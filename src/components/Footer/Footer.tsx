@@ -3,6 +3,7 @@ import styles from "./Footer.module.css"
 
 import { siteConfig } from "../../scripts/site.ts";
 
+import PageLink from "../PageLink.tsx";
 import LinkButton from '../../components/LinkButton/LinkButton.tsx'
 import Sp from "../../components/Space.tsx";
 import ClipboardCopy from "../ClipboardCopy/ClipboardCopy";
@@ -34,20 +35,25 @@ function Footer({}: Props) {
             <div className={`${appStyles["content-holder"]} ${styles["footer-content"]}`}>
                 <div className={styles["squiggly-guys"]}> {/** movinators */}
 
-                    <div className={styles["squiggly-guy"]}> {/** regulatory info */}
-                        <div className={styles["horizontal-divide"]}>
-                        
-                            <img src={logoImage} alt={`${firmName} Logo`} className={styles["logo"]}/> {/* just the logo */}
+                    <div className={styles["squiggly-guy"]}> {/** proper logo */}
+                        <PageLink
+                            to="/"
+                            className={styles["logo-link"]}
+                        >
+                            <div className={styles["horizontal-divide"]}>
+                            
+                                <img src={logoImage} alt={`${firmName} Logo`} className={styles["logo"]}/> {/* just the logo */}
 
-                            <div>
-                                <h1 className={styles["fancy1"]}>
-                                    <span className={styles["denim"]}>AcQuity</span>{" "}
-                                    <span className={styles["lime-green"]}>Legal</span>
-                                </h1>
+                                <div>
+                                    <h1 className={styles["fancy1"]}>
+                                        <span className={styles["denim"]}>AcQuity</span>{" "}
+                                        <span className={styles["lime-green"]}>Legal</span>
+                                    </h1>
 
-                                <h1 className={styles["fancy2"]}>Pty Ltd</h1>
+                                    <h1 className={styles["fancy2"]}>Pty Ltd</h1>
+                                </div>
                             </div>
-                        </div>
+                        </PageLink>
                     </div>
 
                     <div className={styles["squiggly-guy"]}> {/** contact stuff */}
@@ -59,31 +65,28 @@ function Footer({}: Props) {
                                     text={contactPhone}
                                     size={"1.4em"}
                                     translateY={"-0.1em"}
-                                    baseCol={"var(--bcolor-navy)"}
-                                    hoverCol={"var(--bcolore-dark-navy)"}
+                                    baseCol={"var(--color-text)"}
                                     transparent={true}
                                 /></li>
                                 <li>{contactEmail}<ClipboardCopy
                                     text={contactEmail}
                                     size={"1.4em"}
                                     translateY={"-0.1em"}
-                                    baseCol={"var(--bcolor-navy)"}
-                                    hoverCol={"var(--bcolore-dark-navy)"}
+                                    baseCol={"var(--color-text)"}
                                     transparent={true}
                                 /></li>
                                 <li>{contactLocation}<ClipboardCopy
                                     text={contactLocation}
                                     size={"1.4em"}
                                     translateY={"-0.1em"}
-                                    baseCol={"var(--bcolor-navy)"}
-                                    hoverCol={"var(--bcolore-dark-navy)"}
+                                    baseCol={"var(--color-text)"}
                                     transparent={true}
                                 /></li>
                             </ul>
                         </div>
                     </div>
 
-                    <div className={styles["squiggly-guy"]}> {/** contact stuff */}
+                    <div className={styles["squiggly-guy"]}> {/** contact button */}
                         <LinkButton
                             link="/contact/"
                             transparent={false}
@@ -108,8 +111,21 @@ function Footer({}: Props) {
                 <hr/>
             </div>
 
-            <div className={styles["copyright-box"]}>
-                <p className={styles["copyright-words"]}>&copy; Copyright {currYear} {firmName}. All Rights Reserved.</p> 
+            <div className={styles["squiggly-texts"]}> {/** movinators TWO */}
+
+                <div className={styles["little-text-box"]}>
+                    <PageLink
+                        to="/terms-condition"
+                        className={styles["terms-link"]}
+                    >
+                        <p className={styles["terms-words"]}>Terms & Conditions</p>
+                    </PageLink>
+                </div>
+
+                <div className={styles["little-text-box"]}>
+                    <p className={styles["copyright-words"]}>&copy; Copyright {currYear} {firmName}. All Rights Reserved.</p> 
+                </div>
+
             </div>
         </footer>
     );

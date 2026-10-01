@@ -1,0 +1,76 @@
+.unclickable-item {
+    border: none;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+
+.unclickable-header {
+    margin: 0;
+    padding: 0;
+}
+
+
+.unclickable-body {
+    padding: 0;
+}
+
+
+.clickable-box {
+    cursor: default;
+}
+
+
+.title-box {
+    padding: 1rem 0.37rem;
+    background-color: var(--color-header);
+}
+
+.title-box h3 { /*text at the top*/
+    line-height: 1;
+    text-align: right;
+
+    margin: 0 0.4em;
+    padding: 0;
+}
+
+.title-box p { /*not always there, but a brief description*/
+    margin: 0.6em 0.4em 0 0.4em;
+    padding: 0;
+
+    text-align: right;
+    color: var(--bcolor-denim);
+}
+
+
+.dropdown-box { /*content after fold down*/
+    margin: 0;
+    background-color: var(--color-header);
+}
+
+.dropdown-box h4 {
+    margin:  0      0.67em 0      0.67em;
+    padding: 0.67em 0      0.37em 0     ;
+
+    text-align: center;
+
+    color: var(--color-text);
+
+    border: 0;
+    border-top: 2px solid color-mix(in srgb, var(--bcolor-denim) 50%, transparent);
+}
+
+.dropdown-box ul {
+    margin: 0;
+    padding: 0 3em 1em 3em;
+
+    color: var(--color-text);
+}
+
+
+
+@media (max-width: 60rem) {
+    .article-holder {
+        grid-template-columns: 1fr;
+    }
+}

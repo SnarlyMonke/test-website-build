@@ -2,8 +2,9 @@ import styles from "./Header.module.css"
 import burgerStyles from "./Hamburger.module.css"
 
 import { useRef, useEffect, useState } from "react"
-import { Link } from "react-router-dom";
 import { Fade as HamburgerIcon } from 'hamburger-react'
+
+import PageLink from "../PageLink.tsx"
 
 import { siteConfig } from "../../scripts/site.ts";
 import type {Page} from "./Page.type.ts";
@@ -51,20 +52,10 @@ function Header({}: Props) {
 
     /** formatting options at the top bar */
     const headerList = headerOptions.map(option => <li key={option.id} value={option.link} className={styles["page-box"]}>
-        <Link to={option.link} className={styles[option.style]}>
+        <PageLink to={option.link} className={styles[option.style]}>
             <b id={option.namedId}>{option.name}</b>
-        </Link>
-    </li>); //maps food (every item in foods) into list brackets
-
-    /** formatting options at the top bar (but for murger instead) */
-    const burgerList = headerOptions.map(option => <li key={option.id} value={option.link}
-        className={`${burgerStyles["page-box"]} ${option.style === "page-link-bold" ? burgerStyles["page-link-bold-li"] : ""}`} /** adds the bottom-link class to the li instead of the a */
-    >
-        <Link to={option.link} className={burgerStyles[option.style]}>
-            <b>{option.name}</b>
-        </Link>
-    </li>); //maps food (every item in foods) into list brackets
-
+        </PageLink>
+    </li>);
 
 
     /** hamburger management */
@@ -75,6 +66,19 @@ function Header({}: Props) {
         
         setOpen(!open); /* flips the state */
     }
+
+    const closeMenu = () => { /** just closes it */
+        setOpen(false);
+    };  
+
+    /** formatting options at the top bar (but for murger instead) */
+    const burgerList = headerOptions.map(option => <li key={option.id} value={option.link}
+        className={`${burgerStyles["page-box"]} ${option.style === "page-link-bold" ? burgerStyles["page-link-bold-li"] : ""}`} /** adds the bottom-link class to the li instead of the a */
+    >
+        <PageLink to={option.link} className={burgerStyles[option.style]} onClick={closeMenu}>
+            <b>{option.name}</b>
+        </PageLink>
+    </li>);
 
     //#endregion
 
@@ -97,7 +101,7 @@ function Header({}: Props) {
         > {/** snatches css of header, then hides it with hidden-header */}
 
             {/** corner logo */}
-            <Link to="/" className={styles["logo-container"]}
+            <PageLink to="/" className={styles["logo-container"]}
                 id="container_logo" ref={(element) => {containerRefs.current["container_logo"] = element;}}
             >
 
@@ -121,7 +125,7 @@ function Header({}: Props) {
                     ref={(element) => {containerRefs.current["container_logo_text_folded"] = element;}}
                 ></img> {/* smooshed text */}
 
-            </Link>
+            </PageLink>
 
             {/** header options */}
             <nav
@@ -148,7 +152,7 @@ function Header({}: Props) {
         <header className={styles["header"]}>
 
             {/** corner logo */}
-            <Link to="/" className={styles["logo-container"]}
+            <PageLink to="/" className={styles["logo-container"]}
                 id="container_logo" ref={(element) => {containerRefs.current["container_logo"] = element;}}>
 
                 <img src={logoImage} alt={`${firmName} Logo`}
@@ -165,7 +169,7 @@ function Header({}: Props) {
                     className={`${styles["logo-text-folded"]} ${useLogoTextFolded ? styles["use-logo-text-folded"] : styles["remove-logo-text-folded"]}`}
                 ></img> {/* smooshed text */}
 
-            </Link>
+            </PageLink>
 
 
             {/** header options */}
