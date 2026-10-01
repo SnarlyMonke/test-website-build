@@ -12,7 +12,9 @@ function convertArticleWordsToHTML(articleEntries: Article[]) {
     return articleEntries.map((article) => ({
         title: article.titleHTML ?? <h3>{article.title}</h3>,
 
-        image: article.image,
+        imagePNG: article.imagePNG,
+        imageWEBP: article.imageWEBP,
+        imageAltText: article.imageAltText ?? "",
 
         shortDescription:
             article.shortDescriptionHTML ??
@@ -47,7 +49,9 @@ export function articleToHTML(rawArticleEntries: Article[]) {
                     <div className={styles["image-box"]}>
 
                         <ImageHolder
-                            imagePNG={entry.image}
+                            imagePNG={entry.imagePNG}
+                            imageWEBP={entry.imageWEBP}
+                            altText={entry.imageAltText}
                             height="20rem"
                         /> {/** da image */}
 
@@ -94,7 +98,9 @@ export function articleToUnclickableHTML(rawArticleEntries: Article[]) {
                     <div className={unclickableStyles["image-box"]}>
 
                         <ImageHolder
-                            imagePNG={entry.image}
+                            imagePNG={entry.imagePNG}
+                            imageWEBP={entry.imageWEBP}
+                            altText={entry.imageAltText}
                             height="20rem"
                         /> {/** da image */}
 

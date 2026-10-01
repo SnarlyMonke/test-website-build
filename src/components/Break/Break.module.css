@@ -1,0 +1,5 @@
+.the-break {
+    border: none; /* gets rid of the old one */
+    border-top: 3px solid var(--color-footer);
+    opacity: 1;
+}

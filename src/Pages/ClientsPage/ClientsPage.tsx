@@ -3,7 +3,8 @@
 import appStyles from "../../App.module.css"
 import styles from "./ClientsPage.module.css"
 
-import tempImage from "../../assets/photos/temp_guy.png"
+import tempImagePNG from "../../assets/photos/temp_guy.png"
+import tempImageWEBP from "../../assets/photos/temp_guy.webp"
 
 import { siteConfig } from '../../scripts/site.ts'
 import type { Article } from "../../components/ArticleGrid/Article.type.ts"
@@ -26,7 +27,8 @@ const ClientsPage = () => {
     const articleEntries: Article[] = [
         {
             title: "Charities and not-for-profits",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         From established national organisations to smaller charities experiencing significant growth, I advise on{" "}
                                             <em>governance</em>,{" "}
@@ -37,7 +39,8 @@ const ClientsPage = () => {
         },
         {
             title: "Aboriginal organisations",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         I work with Aboriginal corporations and organisations on{" "}
                                             <em>governance</em>,{" "}
@@ -49,7 +52,8 @@ const ClientsPage = () => {
         },
         {
             title: "Foundations and philanthropic organisations",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         Advice may include{" "}
                                             <em>governance arrangements</em>,{" "}
@@ -60,7 +64,8 @@ const ClientsPage = () => {
         },
         {
             title: "Boards",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         A significant part of my work is directly with boards and directors.<Sp/>
                                         Boards often seek advice where an issue extends <em>beyond</em> the wording of a particular legal provision and requires an understanding of{" "}
@@ -71,7 +76,8 @@ const ClientsPage = () => {
         },
         {
             title: "Founders and growing organisations",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         Founder-led organisations can face particular challenges as they grow.<Sp/>
                                         Informal arrangements that worked at an earlier stage may need to evolve into{" "}
@@ -84,7 +90,8 @@ const ClientsPage = () => {
         },
         {
             title: "Executives",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         I also work closely with{" "}
                                             <em>chief executives</em>,{" "}

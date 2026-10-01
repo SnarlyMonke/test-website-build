@@ -4,7 +4,9 @@ export type Article = {
     title?: string; /** just the text inside */
     titleHTML?: ReactNode; /** all the html, even wrapper */
 
-    image: string;
+    imagePNG: string;
+    imageWEBP: string;
+    imageAltText?: string;
 
     shortDescription?: string; /** just the text inside */
     shortDescriptionHTML?: ReactNode; /** all the html, even wrapper */

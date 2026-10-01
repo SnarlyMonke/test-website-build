@@ -3,8 +3,10 @@
 import appStyles from "../../App.module.css"
 // import styles from "./ExpertisePage.module.css"
 
-import tempImage from "../../assets/photos/temp_guy.png"
-import beachSide from "../../assets/photos/beach_side_2.png"
+import tempImagePNG from "../../assets/photos/temp_guy.png"
+import tempImageWEBP from "../../assets/photos/temp_guy.webp"
+import beachSidePNG from "../../assets/photos/beach_side_2.png"
+import beachSideWEBP from "../../assets/photos/beach_side_2.png"
 
 import { siteConfig } from '../../scripts/site.ts'
 import type { Article } from "../../components/ArticleGrid/Article.type.ts"
@@ -12,6 +14,7 @@ import type { Article } from "../../components/ArticleGrid/Article.type.ts"
 import Sp from "../../components/Space.tsx";
 import ArticleGrid from "../../components/ArticleGrid/ArticleGrid.tsx";
 import ImageText from "../../components/ImageText/ImageText.tsx";
+import Break from "../../components/Break/Break.tsx"
 
 
 const ExpertisePage = () => {
@@ -28,7 +31,8 @@ const ExpertisePage = () => {
     const articleEntries: Article[] = [
         {
             title: "Charity and not-for-profit law",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "",
             dotPointPreface: "Advice includes:",
             dotPointsHTML: [
@@ -45,7 +49,8 @@ const ExpertisePage = () => {
         },
         {
             title: "Governance and board advice",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "I advise boards on both governance frameworks and individual decisions.",
             dotPointPreface: "This includes:",
             dotPointsHTML: [
@@ -66,7 +71,8 @@ const ExpertisePage = () => {
         },
         {
             title: "Aboriginal corporations",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "",
             dotPointPreface: "Advice to Aboriginal corporations includes:",
             dotPointsHTML: [
@@ -83,7 +89,8 @@ const ExpertisePage = () => {
         },
         {
             title: "Corporate structures and organisational change",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "I advise organisations establishing, changing or simplifying their corporate structures.",
             dotPointPreface: "This can include:",
             dotPointsHTML: [
@@ -100,7 +107,8 @@ const ExpertisePage = () => {
         },
         {
             title: "Commercial arrangements",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "Charities and not-for-profits enter commercial arrangements every day.",
             dotPointPreface: "I advise on:",
             dotPointsHTML: [
@@ -116,7 +124,8 @@ const ExpertisePage = () => {
         },
         {
             title: "Governance frameworks and organisational development",
-            image: tempImage,
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescription: "As organisations grow, informal ways of working often need to evolve.",
             dotPointPreface: "I assist organisations to develop governance arrangements including:",
             dotPointsHTML: [
@@ -147,9 +156,12 @@ const ExpertisePage = () => {
 
                 <ArticleGrid articles={articleEntries}/>
 
+                <Break/>
+
                 <ImageText
                     titleHTML={<h2>Complex and sensitive matters</h2>}
-                    imagePNG={beachSide}
+                    imagePNG={beachSidePNG}
+                    imageWEBP={beachSideWEBP}
                     height="20rem"
                     imagePlacementX="right"
                 >

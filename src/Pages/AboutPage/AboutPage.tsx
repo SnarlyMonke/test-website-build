@@ -3,13 +3,16 @@
 import appStyles from "../../App.module.css"
 // import styles from "./AboutPage.module.css"
 
+import dalveenBanjoPNG from "../../assets/photos/dalveen_bongo.png"
+import dalveenBanjoWEBP from "../../assets/photos/dalveen_bongo.webp"
+import dalveenDeskSeriousPNG from "../../assets/photos/dalveen_desk_2.png"
+import dalveenDeskSeriousWEBP from "../../assets/photos/dalveen_desk_2.webp"
+
 import { siteConfig } from '../../scripts/site.ts'
 
 import ImageText from '../../components/ImageText/ImageText.tsx'
 import Sp from "../../components/Space.tsx"
-
-import dalveenBanjoPNG from "../../assets/photos/dalveen_bongo.png"
-import dalveenDeskSeriousPNG from "../../assets/photos/dalveen_desk_2.png"
+import Break from "../../components/Break/Break.tsx"
 
 
 const AboutPage = () => {
@@ -32,6 +35,7 @@ const AboutPage = () => {
                     titleHTML={<h1>About Dalveen</h1>}
                     altText="Picture of Dalveen (and Banjo)"
                     imagePNG={dalveenBanjoPNG}
+                    imageWEBP={dalveenBanjoWEBP}
                     height={"30rem"}
                 >
                     <p>I established <em>{firmName}</em> to provide experienced, practical legal and governance advice to organisations whose work has a broader purpose.</p>
@@ -44,22 +48,26 @@ const AboutPage = () => {
             </div>
 
             <div className={appStyles["content-holder"]}> {/** page limited to 1200px */}
+                
+                <div> {/** extra info from da intro stuff */}
+                    <p>My role is to help make those issues clearer and more manageable so that boards and leaders can make sound decisions and concentrate on the work their organisation exists to do.<Sp/>
+                        <strong>Charities are not simple organisations.</strong><Sp/>
+                        They can be substantial employers and businesses.<Sp/>
+                        They manage{" "}
+                            <em>funding</em>,{" "}
+                            <em>contracts</em>,{" "}
+                            <em>intellectual property</em>,{" "}
+                            <em>regulatory obligations</em>,{" "}
+                            <em>relationships</em> and{" "}
+                            <em>risk</em>.<Sp/>
+                        At the same time, every decision ultimately needs to remain connected to charitable purpose and public benefit.<Sp/>
+                        <strong>I enjoy working at that intersection.</strong></p>
 
-                <p>My role is to help make those issues clearer and more manageable so that boards and leaders can make sound decisions and concentrate on the work their organisation exists to do.<Sp/>
-                    <strong>Charities are not simple organisations.</strong><Sp/>
-                    They can be substantial employers and businesses.<Sp/>
-                    They manage{" "}
-                        <em>funding</em>,{" "}
-                        <em>contracts</em>,{" "}
-                        <em>intellectual property</em>,{" "}
-                        <em>regulatory obligations</em>,{" "}
-                        <em>relationships</em> and{" "}
-                        <em>risk</em>.<Sp/>
-                    At the same time, every decision ultimately needs to remain connected to charitable purpose and public benefit.<Sp/>
-                    <strong>I enjoy working at that intersection.</strong></p>
+                    <p>I am most comfortable working alongside my clients — understanding <em>what</em> they are trying to achieve, identifying the issues that <em>genuinely matter</em> and helping them find practical solutions.<Sp/>
+                        That is why I chose to establish a legal practice focused on this sector.</p>
+                </div>
 
-                <p>I am most comfortable working alongside my clients — understanding <em>what</em> they are trying to achieve, identifying the issues that <em>genuinely matter</em> and helping them find practical solutions.<Sp/>
-                    That is why I chose to establish a legal practice focused on this sector.</p>
+                <br/><Break/>
 
                 <h2>Experience and perspective</h2>
                     <p>My background in corporate law and governance allows me to bring a commercial and structural perspective to charity and not-for-profit matters.</p>
@@ -77,9 +85,12 @@ const AboutPage = () => {
                         The aim is not to create governance for governance's sake.<Sp/>
                         It is to put in place legal and governance arrangements that are proportionate, capable of being implemented and appropriate for the organisation concerned.</p>
 
+                <br/><Break/>
+
                 <ImageText
                     titleHTML={<h2>Professional background and History</h2>}
                     imagePNG={dalveenDeskSeriousPNG}
+                    imageWEBP={dalveenDeskSeriousWEBP}
                     height="30rem"
                     imagePlacementX="right"
                 >

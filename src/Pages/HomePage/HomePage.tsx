@@ -3,9 +3,12 @@
 import appStyles from "../../App.module.css"
 // import styles from "./HomePage.module.css"
 
-import tempImage from "../../assets/photos/temp_guy.png"
+import tempImagePNG from "../../assets/photos/temp_guy.png"
+import tempImageWEBP from "../../assets/photos/temp_guy.webp"
 import dalveenPortraitPNG from "../../assets/photos/dalveen_portrait.png"
+import dalveenPortraitWEBP from "../../assets/photos/dalveen_portrait.webp"
 import dalveenDeskPNG from "../../assets/photos/dalveen_desk.png"
+import dalveenDeskWEBP from "../../assets/photos/dalveen_desk.webp"
 
 import { siteConfig } from '../../scripts/site.ts'
 import type { Article } from "../../components/ArticleGrid/Article.type.ts"
@@ -17,6 +20,7 @@ import LinkButton from '../../components/LinkButton/LinkButton.tsx'
 import ArticleGrid from "../../components/ArticleGrid/ArticleGrid.tsx";
 import Sp from "../../components/Space.tsx";
 import ImageText from "../../components/ImageText/ImageText.tsx"
+import Break from "../../components/Break/Break.tsx"
 
 
 const HomePage = () => {
@@ -31,9 +35,9 @@ const HomePage = () => {
     
 
     const articleEntries: Article[] = [
-        {
-            title: "Charity and not-for-profit law",
-            image: tempImage,
+        {title: "Charity and not-for-profit law",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         <em>Charitable purposes</em>,{" "}
                                         <em>ACNC requirements</em>,{" "}
@@ -42,9 +46,9 @@ const HomePage = () => {
                                         <em>public</em> rather than{" "}
                                         <em>private</em> benefit.</p>,
         },
-        {
-            title: "Governance and boards",
-            image: tempImage,
+        {title: "Governance and boards",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         <em>Board structures and processes</em>,{" "}
                                         <em>directors' duties</em>,{" "}
@@ -54,9 +58,9 @@ const HomePage = () => {
                                         <em>governance frameworks</em> and{" "}
                                         <em>difficult board decisions</em>.</p>,
         },
-        {
-            title: "Aboriginal corporations",
-            image: tempImage,
+        {title: "Aboriginal corporations",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         <em>CATSI Act governance</em>,{" "}
                                         <em>rule books</em>,{" "}
@@ -64,9 +68,9 @@ const HomePage = () => {
                                         <em>regulatory matters</em> and{" "}
                                         <em>organisational change</em>.</p>,
         },
-        {
-            title: "Structures and organisational change",
-            image: tempImage,
+        {title: "Structures and organisational change",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         <em>New entities</em>,{" "}
                                         <em>subsidiaries</em>,{" "}
@@ -75,9 +79,9 @@ const HomePage = () => {
                                         <em>transfers of activities</em> and{" "}
                                         <em>strategic organisational change</em>.</p>,
         },
-        {
-            title: "Commercial arrangements",
-            image: tempImage,
+        {title: "Commercial arrangements",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>
                                         <em>Contracts</em>,{" "}
                                         <em>funding arrangements</em>,{" "}
@@ -86,9 +90,9 @@ const HomePage = () => {
                                         <em>practically</em> as well as{" "}
                                         <em>legally</em>.</p>,
         },
-        {
-            title: "Complex and sensitive matters",
-            image: tempImage,
+        {title: "Complex and sensitive matters",
+            imagePNG: tempImagePNG,
+            imageWEBP: tempImageWEBP,
             shortDescriptionHTML:   <p>Advice to boards where{" "}
                                         <em>legal obligations</em>,{" "}
                                         <em>governance responsibilities</em>,{" "}
@@ -124,6 +128,7 @@ const HomePage = () => {
                 <ImageText
                     titleHTML={<h2>Legal advice for organisations doing important work</h2>}
                     imagePNG={dalveenDeskPNG}
+                    imageWEBP={dalveenDeskWEBP}
                     height="35rem"
                 >
 
@@ -145,6 +150,8 @@ const HomePage = () => {
                         keeping sight of both the organisation's legal obligations and the purpose it exists to serve.</p>
 
                 </ImageText>
+
+                <br/><Break/>
 
                 <div>
                     <h2>Legal advice that understands the organisation behind the issue</h2>
@@ -168,6 +175,8 @@ const HomePage = () => {
 
                 </div>
 
+                <br/><Break/>
+
                 <div>
                     <h2>How we can help</h2>
                     <h3>{firmName} advises on:</h3>
@@ -178,6 +187,8 @@ const HomePage = () => {
                     />
                 </div>
 
+                <br/><Break/>
+
                 <div>
                     <h2>Our approach</h2>
                     <p>Good governance should help an organisation achieve its purpose, not become an end in itself.<Sp/>
@@ -186,11 +197,14 @@ const HomePage = () => {
                     <p><strong>Knowing the difference is part of good legal advice.</strong></p>
                 </div>
 
+                <br/><Break/>
+
                 <div>
 
                     <ImageText
                         titleHTML={<h2>Experience</h2>}
                         imagePNG={dalveenPortraitPNG}
+                        imageWEBP={dalveenPortraitWEBP}
                         height="25rem"
                         imagePlacementX="right"
                     >
