@@ -4,12 +4,14 @@ import appStyles from "../../App.module.css"
 import styles from "./TermsConditionPage.module.css"
 
 import banjoPNG from "../../assets/photos/bongo.png"
+import banjoWEBP from "../../assets/photos/bongo.webp"
 
 // import { siteConfig } from '../../scripts/site.ts'
 
 import Sp from "../../components/Space.tsx";
 import InlineSVG from "../../components/InlineSVG/InlineSVG.tsx";
 import ImageHolder from "../../components/ImageHolder/ImageHolder.tsx"
+import Break from "../../components/Break/Break.tsx";
 
 import SVGArrowRight from "../../assets/svgs/arrow-right-svgrepo-com.svg";
 import SVGClipboardAdd from "../../assets/svgs/clipboard-add.svg";
@@ -33,6 +35,8 @@ const TermsConditionPage = () => {
             <div className={appStyles["content-holder"]}> {/** page limited to 1200px */}
                 <h1>Terms & Conditions</h1>
 
+                <Break/>
+
                 <h2>CC Attribution</h2>
 
                     <h4>Arrow Right <InlineSVG svg={SVGArrowRight}/></h4>
@@ -53,13 +57,14 @@ const TermsConditionPage = () => {
                     Source: <a href="https://www.svgrepo.com/svg/522795/clipboard-check">https://www.svgrepo.com/svg/522795/clipboard-check</a></p>
                     <br/>
                 
-                <br/><br/><br/>
+                <br/><Break/><br/>
                 <ImageHolder
                     className={styles["chilling-image"]}
                     imagePNG={banjoPNG}
+                    imageWEBP={banjoWEBP}
                 />
                 <p className={styles["chilling-quote"]}><em>“Rouf. Rourouuouououf...”</em> - <strong>Banjo</strong></p>
-                <br/>
+                <br/><Break/>
 
                 <h2>Website Credit</h2>
                     <p style={{ textAlign: "center" }}>Website by James Chipper</p>
